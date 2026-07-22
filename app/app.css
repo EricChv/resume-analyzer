@@ -44,10 +44,10 @@ select {
   color: #ffffff;
   padding: 0.5rem 1rem;
   border: 1px solid #111111;
+  @apply rounded-xl
 }
 
 .resume-card {
-  @apply flex flex-col gap-8 h-[560px] w-[350px] 
-  lg:w-[430px] xl:w-[490px]
-  border border-black rounded-xl p-4 bg-white;
+  @apply flex flex-col gap-8 w-full  lg:w-[450px] xl:w-[490px] bg-white rounded-xl p-4 shadow-lg;
 }
+

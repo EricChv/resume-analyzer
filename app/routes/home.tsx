@@ -25,7 +25,8 @@ export default function Home() {
 
       {/* If resumes.length > 0, render ResumeCards */}
       {resumes.length > 0 && (
-      <div>
+      // defines space between boxes
+      <div className="flex flex-col gap-6 px-4 sm:px-8 lg:px-16 py-6"> 
         {resumes.map((resume) => (
           <ResumeCard key={resume.id} resume={resume} />
         ))}

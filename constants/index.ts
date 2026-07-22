@@ -4,9 +4,9 @@ export const resumes: Resume[] = [
   {
     id: "1",
     companyName: "Amazon",
-    jobTitle: "Backend Developer",
-    imagePath: "/images/resume-1.png",
-    resumePath: "/resumes/resume-1.pdf",
+    jobTitle: "DevOps Engineer",
+    imagePath: "/images/resumes/imagePath/1.png",
+    resumePath: "/resumes/resumes/resumePath/1.pdf",
     feedback: {
       overallScore: 85,
       ATS: {
@@ -34,9 +34,9 @@ export const resumes: Resume[] = [
   {
     id: "2",
     companyName: "Salesforce",
-    jobTitle: "DevOps Engineer",
-    imagePath: "/images/resume-2.png",
-    resumePath: "/resumes/resume-2.pdf",
+    jobTitle: "Backend Developer",
+    imagePath: "/images/resumes/imagePath/2.png",
+    resumePath: "/resumes/resumes/resumePath/2.pdf",
     feedback: {
       overallScore: 55,
       ATS: {
@@ -65,8 +65,8 @@ export const resumes: Resume[] = [
     id: "3",
     companyName: "Cisco",
     jobTitle: "Network Engineer",
-    imagePath: "/images/resume-3.png",
-    resumePath: "/resumes/resume-3.pdf",
+    imagePath: "/images/resumes/imagePath/3.png",
+    resumePath: "/resumes/resumes/resumePath/3.pdf",
     feedback: {
       overallScore: 75,
       ATS: {
@@ -95,8 +95,8 @@ export const resumes: Resume[] = [
     id: "4",
     companyName: "Microsoft",
     jobTitle: "Data Analyst",
-    imagePath: "/images/resume-4.png",
-    resumePath: "/resumes/resume-4.pdf",
+    imagePath: "/images/resumes/imagePath/4.png",
+    resumePath: "/resumes/resumes/resumePath/4.pdf",
     feedback: {
       overallScore: 75,
       ATS: {
