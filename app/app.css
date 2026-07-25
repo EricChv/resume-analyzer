@@ -15,17 +15,17 @@ main {
 }
 
 h1 {
-  font-size: clamp(3rem, 5vw, 4.5rem);
-  line-height: 0.95;
+  font-size: xx-large;
+  line-height: 0.85;
   letter-spacing: -0.02em;
   font-weight: 700;
-  color: #111111;
+  color: black;
 }
 
 h2 {
-  font-size: clamp(1.25rem, 2vw, 1.875rem);
-  line-height: 1.2;
-  color: #111111;
+  font-size: large;
+  opacity: 0.8;
+  color: black;
 }
 
 button,
@@ -42,12 +42,39 @@ select {
   white-space: nowrap;
   background: #111111;
   color: #ffffff;
-  padding: 0.5rem 1rem;
+  padding: 0.2rem 0.75rem;
   border: 1px solid #111111;
-  @apply rounded-xl
+  @apply rounded-lg transition-colors duration-200;
+}
+
+.primary-button:hover {
+  background: #222;
 }
 
 .resume-card {
-  @apply flex flex-col gap-8 w-full  lg:w-[450px] xl:w-[490px] bg-white rounded-xl p-4 shadow-lg;
+  @apply flex flex-col 
+  gap-8 
+  w-full  
+  lg:w-[450px] xl:w-[490px] 
+  bg-white 
+  rounded-2xl 
+  p-5 
+  shadow-md
+  transition-all duration-200 hover:-translate-y-2 hover:shadow-xl;
+}
+
+.heading-content {
+  @apply 
+  px-4 pt-10 pb-10
+  flex flex-col gap-5 md:flex-1 mx-auto items-center shadow-xl
+}
+
+.resume-section {
+  @apply flex flex-wrap 
+  max-lg:flex-col 
+  gap-6 items-start
+  justify-evenly 
+  py-10
+  px-6;
 }
 

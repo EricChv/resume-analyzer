@@ -91,36 +91,7 @@ export const resumes: Resume[] = [
       },
     },
   },
-  {
-    id: "4",
-    companyName: "Microsoft",
-    jobTitle: "Data Analyst",
-    imagePath: "/images/resumes/imagePath/4.png",
-    resumePath: "/resumes/resumes/resumePath/4.pdf",
-    feedback: {
-      overallScore: 75,
-      ATS: {
-        score: 90,
-        tips: [],
-      },
-      toneAndStyle: {
-        score: 90,
-        tips: [],
-      },
-      content: {
-        score: 90,
-        tips: [],
-      },
-      structure: {
-        score: 90,
-        tips: [],
-      },
-      skills: {
-        score: 90,
-        tips: [],
-      },
-    },
-  },
+  
 ]
 
 export const AIResponseFormat = `
