@@ -21,7 +21,7 @@ const ResumeCard = ( { resume : {id, companyName, jobTitle, feedback, imagePath}
         </div>
       </div>
 
-      <div className='border border-gray-300 rounded-lg  overflow-hidden
+      <div className='border border-gray-300 rounded-2xl  overflow-hidden
       animate-in fade-in duration-1000'>
         <div className='w-full h-full'>
           <img

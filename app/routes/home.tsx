@@ -11,27 +11,27 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   return (
-    <main>
-      <div className="bg-[#FF5948] text-black min-h-screen flex items-center justify-center">
+    <main className="min-h-screen">
+      <div className="bg-[#FF5948] text-black flex flex-col">
         <Navbar />
-          <section className="heading-content">
+
+        <section className=" bg-[#FE5D4C]flex items-center justify-center px-6 py-6 md:py-12 ">
+          <div className="heading-content">
             <h1>Resume Analysis & Application Tracker</h1>
             <h2>
-              AI-powered resume evaluation and application tracking to optimize applications, find weaknesses, and improve outcomes.
+              AI-powered resume evaluation and application tracking to optimize, find weaknesses, and improve outcomes.
             </h2>
-          </section>
-      </div>
-
-          {/* If resumes.length > 0, render ResumeCards */}
-          {resumes.length > 0 && (
-          // defines space between boxes
-          <div className="resume-section"> 
-            {resumes.map((resume) => (
-              <ResumeCard key={resume.id} resume={resume} />
-            ))}
           </div>
+        </section>
+      </div>
+          {resumes.length > 0 && (
+            <div className="resume-section">
+              {resumes.map((resume) => (
+                <ResumeCard key={resume.id} resume={resume} />
+              ))}
+            </div>
           )}
-          
+
     </main>
   );
 }
