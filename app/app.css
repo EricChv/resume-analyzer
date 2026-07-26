@@ -98,11 +98,11 @@ select {
   );
 }
 
-/* @utility bg-gradient {
+@utility bg-gradient {
   background: linear-gradient(
     180deg,
     #FFFDFC 0%,
     #FFF7F4 25%,
     #FFEAE3 100%
   );
-} */
+}

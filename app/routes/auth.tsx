@@ -1,5 +1,6 @@
+import { useEffect } from 'react';
 import { usePuterStore } from '~/lib/puter'
-
+import { useLocation, useNavigate } from 'react-router'
 export const meta = () => ([
   { title: "Sheets | Auth"},
   {name: "description", content: "Log into your account"},
@@ -7,6 +8,16 @@ export const meta = () => ([
 
 const auth = () => {
   const { isLoading, auth } = usePuterStore();
+  const location = useLocation();
+  const next = location.search.split("next=")[1];
+  const navigate = useNavigate()
+
+
+  // redirection if user is already logged in
+  useEffect( () => {
+    //redirect to next if logged in
+    if(auth.isAuthenticated) navigate(next);
+  }, [auth.isAuthenticated, next]) 
 
   return (
     <div>
@@ -20,7 +31,7 @@ const auth = () => {
             <div>
               {isLoading ? (
                 <button className="auth-button animate-pulse">
-                  <p>Logging In...</p>
+                  <p>Signing In...</p>
                 </button>
               // If not loading
               ): (
