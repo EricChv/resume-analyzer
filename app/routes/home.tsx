@@ -30,7 +30,7 @@ export default function Home() {
       <div className="bg-[#FF5948] text-black flex flex-col">
         <Navbar />
 
-        <section className=" bg-[#FE5D4C]flex items-center justify-center px-6 py-6 md:py-12 ">
+        <section className="main-section">
           <div className="heading-content">
             <h1>Resume Analysis & Application Tracker</h1>
             <h2>

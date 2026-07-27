@@ -1,9 +1,0 @@
-<svg width="1861" height="1834" viewBox="0 0 1861 1834" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1821 0H21C-1.09139 0 -19 17.9086 -19 40V1826C-19 1848.09 -1.09139 1866 21 1866H1821C1843.09 1866 1861 1848.09 1861 1826V40C1861 17.9086 1843.09 0 1821 0Z" fill="url(#paint0_linear_11_41)"/>
-<defs>
-<linearGradient id="paint0_linear_11_41" x1="921" y1="0" x2="921" y2="1866" gradientUnits="userSpaceOnUse">
-<stop offset="0.298077" stop-color="#ABEAFF" stop-opacity="0.2"/>
-<stop offset="1" stop-color="#FD5260" stop-opacity="0.1"/>
-</linearGradient>
-</defs>
-</svg>

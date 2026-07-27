@@ -55,6 +55,10 @@ select {
   background: #222;
 }
 
+.main-section {
+  @apply flex flex-col items-center gap-8 pt-12 mx-15 pb-5;
+}
+
 .resume-card {
   @apply flex flex-col 
   gap-8 
@@ -87,6 +91,12 @@ select {
   py-10
   px-6;
 }
+
+
+.form-div {
+  @apply flex flex-col gap-2 w-full items-start mt-4;
+}
+
 
 
 @utility primary-gradient {
