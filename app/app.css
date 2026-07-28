@@ -97,6 +97,9 @@ select {
   @apply flex flex-col gap-2 w-full items-start mt-4;
 }
 
+  .gradient-border {
+    @apply bg-gradient-to-b from-gray-100 to-gray-200 p-4 rounded-2xl text-center;
+  }
 
 
 @utility primary-gradient {
