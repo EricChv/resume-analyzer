@@ -43,9 +43,14 @@ const FileUploader = ({ onFileSelect }: FileUploaderProps) => {
               <p className="text-sm text-gray-500">
                 {formatSize(file.size)}
               </p>    
-              <button className="p-2 cursor-pointer" onClick={(e) => {
-                onFileSelect?.(null)
-              }}>
+              <button
+                type="button"
+                className="p-2 cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  onFileSelect?.(null)
+                }}
+              >
                 <img src="/icons/close-btn.svg" alt="remove" className="w-4 h-4" />
               </button>
             </div>

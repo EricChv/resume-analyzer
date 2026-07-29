@@ -156,5 +156,5 @@ Rules:
 - No markdown
 - No backticks
 - No extra commentary
-- Output must be valid JSON
+- Output must be valid JSON object
 `;
