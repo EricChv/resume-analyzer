@@ -15,7 +15,7 @@ const resume = () => {
   const { id } = useParams()
   const [imageUrl, setImageUrl] = useState("");
   const [resumeUrl, setResumeUrl] = useState("");
-  const [feedback, setFeedback] = useState<Feedback | null>(null);
+  const [feedback, setFeedback] = useState<Feedback | null>();
   const navigate = useNavigate();
 
   useEffect( () => {
@@ -57,7 +57,7 @@ const resume = () => {
         </Link>
       </nav>
       <div className='flex flex-row w-full max-lg:flex-col-reverse'>
-        <section className='feedback-section bg-[#FF5948] bg-cover h-screen sticky top-0 items-center justify-center'>
+        <section className='feedback-section bg-[#F9F7F5] bg-cover h-screen sticky top-0 items-center justify-center'>
           {imageUrl && resumeUrl && (
             <div className=' animate-in fade-in duration-1000 gradient-border max-sm:m-0 h-[90%] max-wxl:h-fit w-fit'>
               <a href={resumeUrl} target="_blank" rel='noopener noreferrer'>
