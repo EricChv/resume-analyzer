@@ -72,7 +72,7 @@ const resume = () => {
 
         </section>
         <section className='feedback-section'>
-          <h2 className="text-4xl !text-black font-bold">Resume Review</h2>
+          <h2 className="text-4xl !text-black font-bold">Analysis Overview</h2>
           {feedback ? (
             <div className='flex flex-col gap-8 animate-in fade-in duration-1000'>
               <Summary feedback={feedback} />
@@ -80,7 +80,7 @@ const resume = () => {
               <Details feedback={feedback} />
             </div>
           ) : (
-            <img src="/images/resume-scan.gif" className="w-full" />
+            <img src="/images/scan.gif" className="w-full" />
 
           )}
         </section>

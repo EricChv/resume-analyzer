@@ -1,11 +1,66 @@
-import React from 'react'
+import { cn } from "~/lib/utils";
 
-const ATS = () => {
+const ATS = ({
+  score,
+  suggestions,
+}: {
+  score: number;
+  suggestions: { type: "good" | "improve"; tip: string }[];
+}) => {
+  const scoreColor =
+    score > 69
+      ? "bg-green-100 text-green-700"
+      : score > 49
+      ? "bg-yellow-100 text-yellow-700"
+      : "bg-red-100 text-red-700";
+
   return (
-    <div>
-      ATS
-    </div>
-  )
-}
+    <div className="w-full rounded-xl border border-gray-200 bg-white p-6">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          
 
-export default ATS
+          <div>
+            <h2 className="text-lg font-semibold text-gray-900">
+              ATS Score
+            </h2>
+            <p className="text-sm text-gray-500">
+              Applicant Tracking System compatibility
+            </p>
+          </div>
+        </div>
+
+        <span
+          className={cn(
+            "rounded-full px-3 py-1 text-sm font-semibold",
+            scoreColor
+          )}
+        >
+          {score}/100
+        </span>
+      </div>
+
+      <div className="mt-6 space-y-3">
+        {suggestions.map((suggestion, index) => (
+          <div key={index} className="flex items-start gap-3">
+            <img
+              src={
+                suggestion.type === "good"
+                  ? "/icons/check.svg"
+                  : "/icons/warning.svg"
+              }
+              alt=""
+              className="mt-1 h-4 w-4"
+            />
+
+            <p className="text-sm leading-6 text-gray-600">
+              {suggestion.tip}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default ATS;
