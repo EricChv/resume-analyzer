@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router';
 import FileUploader from '~/components/FileUploader';
 import Navbar from '~/components/navbar'
 import { convertPdfToImage } from '~/lib/pdfToImage';
+import { extractPdfText } from '~/lib/pdfToText';
 import { usePuterStore } from '~/lib/puter';
 import { generateUUID } from '~/lib/utils';
 import { AIResponseFormat, prepareInstructions } from '../../constants';
@@ -42,6 +43,10 @@ const upload = () => {
     const imageFile = await convertPdfToImage(file);
     if (!imageFile.file) return setStatusText("Error: Failed to convert PDF to image")
 
+    setStatusText("Extracting text from PDF...")
+    const resumeText = await extractPdfText(file);
+    if (!resumeText) return setStatusText("Error: Failed to extract text from PDF")
+
     setStatusText("Uploading the image...")
     const uploadedImage = await fs.upload([imageFile.file]);
     if (!uploadedImage) return setStatusText("Error: Failed to upload image")
@@ -60,9 +65,16 @@ const upload = () => {
 
     setStatusText("Analyzing...")
 
-    const feedback = await ai.feedback(
-      uploadedFile.path,
-      prepareInstructions({ jobTitle, jobDescription, AIResponseFormat })
+    const feedbackPrompt = `${prepareInstructions({ jobTitle, jobDescription, AIResponseFormat })}
+
+Resume Text:
+${resumeText}
+
+Analyze the resume text above. Do not say the resume is missing.`;
+
+    const feedback = await ai.chat(
+      feedbackPrompt,
+      { model: "gemini-2.5-flash" }
     )
     if (!feedback) return setStatusText("Error: Failed to analyze resume");
 
