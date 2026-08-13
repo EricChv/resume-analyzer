@@ -80,7 +80,7 @@ const resume = () => {
               <Details feedback={feedback} />
             </div>
           ) : (
-            <img src="/images/scan.gif" className="w-full" />
+              <p className="text-gray-500">Loading analysis...</p>
 
           )}
         </section>
