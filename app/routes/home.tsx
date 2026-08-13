@@ -58,11 +58,7 @@ export default function Home() {
           </div>
         </section> 
       </div>
-      {loadingResumes && (
-        <div className='flex flex-col items-center justify-center'>
-          <img src="/images/pdf-scan.gif" className='w-[200px]' />
-        </div>
-      )}
+
 
       {!loadingResumes && resumes.length > 0 && (
         <div className="resume-section">
@@ -74,7 +70,7 @@ export default function Home() {
 
       {!loadingResumes && resumes?.length === 0 && (
         <div className='flex flex-col items-center justify-center mt-10 gap-4'>
-          <Link to="/upload" className="primary-button w-fit text-xl font-semibold">
+          <Link to="/upload" className="primary-button w-fit text-xl">
             Upload Resume
           </Link>
         </div>

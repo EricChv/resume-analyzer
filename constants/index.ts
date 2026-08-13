@@ -104,7 +104,7 @@ Return ONLY valid JSON in this exact structure:
     "tips": [
       {
         "type": "good | improve",
-        "tip": "Short title"
+        "tip": "Short title",
         "explanation": "detailed explanation"
       }
     ]

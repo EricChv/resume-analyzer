@@ -14,6 +14,19 @@ const upload = () => {
   const [statusText, setStatusText] = useState('')
   const [file, setFile] = useState<File | null>(null)
 
+  const parseFeedbackJson = (text: string) => {
+    const cleanedText = text
+      .trim()
+      .replace(/^```json\s*/i, "")
+      .replace(/^```\s*/i, "")
+      .replace(/\s*```$/i, "");
+
+    const jsonMatch = cleanedText.match(/\{[\s\S]*\}/);
+    const jsonText = jsonMatch ? jsonMatch[0] : cleanedText;
+
+    return JSON.parse(jsonText);
+  };
+
   const handleFileSelect = (file : File | null) => {
     setFile(file)
   } 
@@ -57,7 +70,12 @@ const upload = () => {
       ? feedback.message.content
       : feedback.message.content[0].text;
 
-    data.feedback = JSON.parse(feedbackText);
+    try {
+      data.feedback = parseFeedbackJson(feedbackText);
+    } catch (error) {
+      console.error("Failed to parse feedback JSON", error, feedbackText);
+      return setStatusText("Error: AI returned invalid JSON");
+    }
     await kv.set(`resume:${uuid}`, JSON.stringify(data));
     setStatusText("Analysis complete, redirecting...")
     console.log(data)
@@ -90,7 +108,7 @@ const upload = () => {
             {isProcessing ? (
               <>
                 <h2>{statusText}</h2>
-                <img src="/images/resume-scan.gif" className="w-50" />
+                <img src="/images/pdf-scan.gif" className="w-50" />
               </>
             // if processing
             ) :  (
