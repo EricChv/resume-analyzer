@@ -43,8 +43,8 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="min-h-screen">
-      <div className="bg-[#FF5948] text-black flex flex-col">
+    <main className="min-h-screen  text-white">
+      <div className="flex flex-col">
         <Navbar />
 
         <section className="main-section">

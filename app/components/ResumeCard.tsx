@@ -24,13 +24,13 @@ const ResumeCard = ( { resume : {id, companyName, jobTitle, feedback, imagePath}
 
       <div>
         <div className='flex flex-col'>
-          {companyName && <h2 className='text-black! font-semibold break-word'>
+          {companyName && <h2 className='!text-white font-semibold break-word'>
             {companyName}
           </h2>}
-          {jobTitle && <h3 className='text-lg break-word text-gray-600'>
+          {jobTitle && <h3 className='text-lg break-word text-neutral-400'>
             {jobTitle}
           </h3>}
-          {!companyName && !jobTitle && <h2 className='text-black! font-bold'>Resume</h2>}
+          {!companyName && !jobTitle && <h2 className='!text-white font-bold'>Resume</h2>}
         </div>
 
         <div className='mt-4 shrink-0'>
@@ -38,7 +38,7 @@ const ResumeCard = ( { resume : {id, companyName, jobTitle, feedback, imagePath}
         </div>
       </div>
 
-      {resumeUrl && (<div className='border border-gray-300 rounded-2xl  overflow-hidden
+      {resumeUrl && (<div className='border border-white/10 rounded-2xl overflow-hidden
       animate-in fade-in duration-1000'>
         <div className='w-full h-full'>
           <img

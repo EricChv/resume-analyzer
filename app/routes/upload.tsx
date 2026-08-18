@@ -111,7 +111,7 @@ Analyze the resume text above. Do not say the resume is missing.`;
 
   return (
     <main className="min-h-screen">
-      <div className="bg-[#FF5948] text-black flex flex-col">
+      <div className=" text-white flex flex-col">
         <Navbar />
 
         <section className="main-section">
@@ -124,7 +124,7 @@ Analyze the resume text above. Do not say the resume is missing.`;
               </>
             // if processing
             ) :  (
-              <h2>Upload Resume to improve your ATS score, find weaknesses, and improve outcomes</h2>
+              <h2>Upload your resume to begin the analysis and get personalized insights into your skills, experience, and areas for improvement.</h2>
             )}
           </div>
         </section>
@@ -135,7 +135,7 @@ Analyze the resume text above. Do not say the resume is missing.`;
         <section className="flex justify-center py-12 px-4">
           <form
             onSubmit={handleSubmit}
-            className="w-full max-w-3xl bg-white rounded-2xl shadow-md p-4"
+            className="w-full max-w-3xl rounded-2xl border border-white/10 bg-neutral-950 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.35)]"
           >
             <div className="form-div">
               <label htmlFor="company-name">Company Name</label>
@@ -144,7 +144,7 @@ Analyze the resume text above. Do not say the resume is missing.`;
                 id="company-name"
                 name="company-name"
                 placeholder='Company Name'
-                className="w-full rounded-lg border border-gray-300 px-4 py-3"
+                className="w-full rounded-lg border border-white/10 bg-neutral-900 px-4 py-3 text-white placeholder:text-neutral-500"
               />
             </div>
             <div className="form-div">
@@ -154,7 +154,7 @@ Analyze the resume text above. Do not say the resume is missing.`;
                 id="job-title"
                 name="job-title"
                 placeholder='Job Title'
-                className="w-full rounded-lg border border-gray-300 px-4 py-3"
+                className="w-full rounded-lg border border-white/10 bg-neutral-900 px-4 py-3 text-white placeholder:text-neutral-500"
               />
             </div>
             <div className="form-div">
@@ -164,7 +164,7 @@ Analyze the resume text above. Do not say the resume is missing.`;
                 id="job-description"
                 name="job-description"
                 placeholder='Job Description'
-                className="w-full rounded-lg border border-gray-300 px-4 py-3"
+                className="w-full rounded-lg border border-white/10 bg-neutral-900 px-4 py-3 text-white placeholder:text-neutral-500"
               />
             </div>
             <div className="form-div">

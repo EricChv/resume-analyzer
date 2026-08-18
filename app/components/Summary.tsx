@@ -1,4 +1,3 @@
-import React from "react";
 import ScoreGauge from "./ScoreGauge";
 import ScoreBadge from "./ScoreBadge";
 
@@ -17,12 +16,12 @@ const Category = ({
       : "text-red-600";
 
   return (
-    <div className="flex items-center justify-between py-4 border-t border-gray-100 first:border-t-0">
+    <div className="flex items-center justify-between py-4 border-t border-white/10 first:border-t-0">
       <div className="flex items-center gap-3">
-        <p className="text-sm font-medium text-gray-900">{title}</p>
+        <p className="text-sm font-medium text-white">{title}</p>
       </div>
 
-      <p className="text-sm font-medium text-gray-500">
+      <p className="text-sm font-medium text-neutral-400">
         <span className={textColor}>{score}</span>/100
       </p>
     </div>
@@ -31,16 +30,16 @@ const Category = ({
 
 const Summary = ({ feedback }: { feedback: Feedback }) => {
   return (
-    <div className="w-full rounded-xl border border-gray-200 bg-white p-6">
+    <div className="w-full rounded-xl border border-white/10 bg-neutral-950 p-6 text-white">
       <div className="flex items-center gap-5">
         <ScoreGauge score={feedback.overallScore} />
 
         <div className="flex-1">
-          <h2 className="text-lg font-semibold text-gray-900">
+          <h3 className="text-lg font-semibold text-white">
             Resume Score
-          </h2>
+          </h3>
 
-          <p className="mt-1 text-sm text-gray-500">
+          <p className="mt-1 text-sm text-neutral-400">
             Overall evaluation based on tone, content, structure, and skills.
           </p>
         </div>

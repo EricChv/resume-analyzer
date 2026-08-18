@@ -28,7 +28,7 @@ const FileUploader = ({ onFileSelect }: FileUploaderProps) => {
   const file = acceptedFiles[0] || null;
 
   return (
-    <div className="w-full gradient-border">
+    <div className="w-full gradient-border bg-neutral-950 text-white">
       <div {...getRootProps()}>
         <input {...getInputProps()} />
         <div className="space-y-4 cursor-pointer flex flex-col items-center">
@@ -37,10 +37,10 @@ const FileUploader = ({ onFileSelect }: FileUploaderProps) => {
           {file ? (
             <div onClick={(e) => e.stopPropagation()}>
   
-              <p className="text-sm text-gray-700 font-medium truncate">
+              <p className="text-sm text-white font-medium truncate">
                 {file.name}
               </p>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-neutral-400">
                 {formatSize(file.size)}
               </p>    
               <button
@@ -57,10 +57,10 @@ const FileUploader = ({ onFileSelect }: FileUploaderProps) => {
             
           ) : (
             <div className="text-center">
-              <p className="text-lg text-gray-500">
+              <p className="text-lg text-neutral-300">
                 <span className="font-semibold">Choose a file</span> or drag it here
               </p>
-              <p className="text-lg text-gray-500">
+              <p className="text-lg text-neutral-400">
                 (Max {formatSize(maxFileSize)})
               </p>
             </div>

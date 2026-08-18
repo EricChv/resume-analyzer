@@ -15,16 +15,16 @@ const ATS = ({
       : "bg-red-100 text-red-700";
 
   return (
-    <div className="w-full rounded-xl border border-gray-200 bg-white p-6">
+    <div className="w-full rounded-xl border border-white/10 bg-neutral-950 p-6 text-white">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           
 
           <div>
-            <h2 className="text-lg font-semibold text-gray-900">
+            <h3 className="text-lg font-semibold text-white">
               ATS Score
-            </h2>
-            <p className="text-sm text-gray-500">
+            </h3>
+            <p className="text-sm text-neutral-400">
               Applicant Tracking System compatibility
             </p>
           </div>
@@ -53,7 +53,7 @@ const ATS = ({
               className="mt-1 h-4 w-4"
             />
 
-            <p className="text-sm leading-6 text-gray-600">
+            <p className="text-sm leading-6 text-neutral-300">
               {suggestion.tip}
             </p>
           </div>

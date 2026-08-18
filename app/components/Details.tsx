@@ -35,7 +35,7 @@ const CategoryHeader = ({
   }) => {
   return (
       <div className="flex gap-4 items-center py-2">
-        <p className="text-base font-semibold">{title}</p>
+        <p className="text-base font-semibold text-white">{title}</p>
         <ScoreBadge score={categoryScore} />
       </div>
   );
@@ -51,7 +51,7 @@ const CategoryContent = ({
       {tips.map((tip, index) => (
         <div
           key={index}
-          className="flex gap-3 border-l-2 border-gray-200 pl-4"
+          className="flex gap-3 border-l-2 border-white/10 pl-4"
         >
           <img
             src={
@@ -64,11 +64,11 @@ const CategoryContent = ({
           />
 
           <div>
-            <p className="text-sm font-medium text-gray-900">
+            <p className="text-sm font-medium text-white">
               {tip.tip}
             </p>
 
-            <p className="mt-1 text-sm leading-6 text-gray-500">
+            <p className="mt-1 text-sm leading-6 text-neutral-400">
               {tip.explanation}
             </p>
           </div>
@@ -81,7 +81,7 @@ const CategoryContent = ({
 const Details = ({ feedback }: { feedback: Feedback }) => {
   return (
       <div className="flex flex-col gap-4 w-full">
-        <div className="w-full rounded-xl border border-gray-200 bg-white p-6">
+        <div className="w-full rounded-xl border border-white/10 bg-neutral-950 p-6 text-white">
           <Accordion>
           <AccordionItem id="tone-style" >
             <AccordionHeader itemId="tone-style">
