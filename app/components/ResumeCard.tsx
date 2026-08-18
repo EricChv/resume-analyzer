@@ -24,9 +24,9 @@ const ResumeCard = ( { resume : {id, companyName, jobTitle, feedback, imagePath}
 
       <div>
         <div className='flex flex-col'>
-          {companyName && <h2 className='!text-white font-semibold break-word'>
+          {companyName && <h3 className='!text-white font-semibold break-word'>
             {companyName}
-          </h2>}
+          </h3>}
           {jobTitle && <h3 className='text-lg break-word text-neutral-400'>
             {jobTitle}
           </h3>}
